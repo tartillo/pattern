@@ -1,6 +1,30 @@
 Pattern
 =======
 
+This fork
+-------
+
+This is a fork from Clips pattern, which seems to be outdated and maintained. I use this fork for a personal project where I still have a dependency on pattern.
+
+The fork fixes following issues for me:
+
+### Mysql dependency
+
+The issue is described here:
+* https://github.com/clips/pattern/issues/275
+* https://github.com/clips/pattern/issues/279
+
+The fix in this fork is to remove mysqlclient as a dependency in setup.py, because it is not needed in my project anyway.
+
+### RunTimeError in iteration in Python >= 3.7
+
+The issue is described here: https://github.com/piskvorky/gensim/issues/2438#issuecomment-644753776
+
+The fix implements this pull request from NicolasBizzozzero that is left hanging by the pattern maintainers: https://github.com/clips/pattern/pull/294
+
+Pattern
+-------
+
 [![Build Status](http://img.shields.io/travis/clips/pattern/master.svg?style=flat)](https://travis-ci.org/clips/pattern/branches)
 [![Coverage](https://img.shields.io/coveralls/clips/pattern/master.svg?style=flat)](https://coveralls.io/github/clips/pattern?branch=master)
 [![PyPi version](http://img.shields.io/pypi/v/pattern.svg?style=flat)](https://pypi.python.org/pypi/pattern)
